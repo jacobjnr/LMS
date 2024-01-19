@@ -1,0 +1,65 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.navbar, .footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.user-info img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Circular profile picture */
+    margin: 10px;
+}
+
+.borrowing-history, .current-loans, .reservations {
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.carousel-item {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px;
+}

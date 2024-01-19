@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowing and Returning Books</title>
+    <link rel="stylesheet" href="brm.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="./dashboard.html">Home</a>
+        <a href="./bmp.html">Book-Management</a>
+        <a href="./profile.html">Profile</a>
+        <a href="javascript:void(0)" onclick="logout()">Logout</a>
+    </div>
+
+    <div class="content">
+        <!-- Borrow Book Form -->
+        <div class="borrow-book">
+            <h2>Borrow Book</h2>
+            <input type="text" placeholder="Search books...">
+            <div class="book-list">
+                <p>
+                    Book Title 1 <br>
+                    Book Title 2 <br>
+                    Book Title 3 <br>
+                    Book Title 4 <br>
+                    Book Title 5 <br>
+                </p>
+            </div>
+        </div>
+
+        <!-- Outstanding Returns -->
+        <div class="outstanding-returns">
+            <h2>Outstanding Returns</h2>
+            <div class="book-list">
+                <p>
+                    Book Title 1 <br>
+                    Book Title 2 <br>
+                    Book Title 3 <br>
+                    Book Title 4 <br>
+                    Book Title 5 <br>
+                </p>
+            </div>
+        </div>
+
+        <!-- Returned Books -->
+        <div class="returned-books">
+            <h2>Returned Books</h2>
+            <div class="book-list">
+                <p>
+                    Book Title 1 <br>
+                    Book Title 2 <br>
+                    Book Title 3 <br>
+                    Book Title 4 <br>
+                    Book Title 5 <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- Footer content -->
+    </div>
+
+    <div class="form-container">
+        <button onclick="toggleForm('borrow')">Borrow Book</button>
+        <button onclick="toggleForm('reserve')">Reserve Book</button>
+
+        <form id="borrowForm" style="display: none;">
+            <h2>Borrow Book</h2>
+            <input type="text" placeholder="Name of Book">
+            <input type="date" placeholder="Date Borrowed">
+            <input type="date" placeholder="Date Due">
+            <input type="text" placeholder="ISBN Number">
+            <button type="submit">Submit</button>
+        </form>
+
+        <form id="reserveForm" style="display: none;">
+            <h2>Reserve Book</h2>
+            <input type="text" placeholder="Name of Book">
+            <input type="text" placeholder="ISBN Number">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm(formType) {
+            var borrowForm = document.getElementById('borrowForm');
+            var reserveForm = document.getElementById('reserveForm');
+
+            if (formType === 'borrow') {
+                borrowForm.style.display = 'block';
+                reserveForm.style.display = 'none';
+            } else if (formType === 'reserve') {
+                borrowForm.style.display = 'none';
+                reserveForm.style.display = 'block';
+            }
+        }
+    </script>
+    
+</body>
+</html>

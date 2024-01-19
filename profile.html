@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="./dashboard.html">Home</a>
+        <a href="./bmp.html">Book-Management</a>
+        <a href="profile.html">Profile</a>
+        <a href="javascript:void(0)" onclick="logout()">Logout</a>
+    </div>
+
+    <div class="profile-container">
+        <div class="user-info">
+            <img src="./images/DALL·E 2024-01-11 17.43.59 - Create an image of a generic user profile picture. The image should represent a neutral, abstract human figure or a silhouette, suitable for use as a .png" alt="User Profile Picture">
+            <h1>Guy Ritchie</h1>
+            <p>Email: guyritchie65@example.com</p>
+        </div>
+
+        <div class="borrowing-history">
+            <h2>Borrowing History</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.19 - Create a book cover image for a fictional mystery novel. The cover should have a modern and appealing design, reflecting the mystery genre. It should .png" alt="Book 1">
+                    <p>Book Title 1</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.25 - Create a book cover image for a fictional romance novel. The design should be modern and attractive, capturing the essence of the romance genre. It sh.png" alt="Book 2">
+                    <p>Book Title 2</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.29 - Create a book cover image for a fictional science fiction novel. The design should be futuristic and captivating, embodying the science fiction genre.png" alt="Book 3">
+                    <p>Book Title 3</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.32 - Design a book cover image for a fictional history novel. The cover should have an elegant and classic design, reflecting the historical genre. It shou.png" alt="Book 4">
+                    <p>Book Title 4</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.35 - Create a book cover image for a fictional fantasy novel. The design should be enchanting and imaginative, perfectly capturing the fantasy genre. It sh.png" alt="Book 5">
+                    <p>Book Title 5</p>
+                </div>
+            </div>
+            <!-- List of borrowed books -->
+        </div>
+
+        <div class="current-loans">
+            <h2>Current Loans</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.19 - Create a book cover image for a fictional mystery novel. The cover should have a modern and appealing design, reflecting the mystery genre. It should .png" alt="Book 1">
+                    <p>Book Title 1</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.25 - Create a book cover image for a fictional romance novel. The design should be modern and attractive, capturing the essence of the romance genre. It sh.png" alt="Book 2">
+                    <p>Book Title 2</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.29 - Create a book cover image for a fictional science fiction novel. The design should be futuristic and captivating, embodying the science fiction genre.png" alt="Book 3">
+                    <p>Book Title 3</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.32 - Design a book cover image for a fictional history novel. The cover should have an elegant and classic design, reflecting the historical genre. It shou.png" alt="Book 4">
+                    <p>Book Title 4</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.35 - Create a book cover image for a fictional fantasy novel. The design should be enchanting and imaginative, perfectly capturing the fantasy genre. It sh.png" alt="Book 5">
+                    <p>Book Title 5</p>
+                </div>
+            </div>
+            <!-- List of currently borrowed books -->
+        </div>
+
+        <div class="reservations">
+            <h2>Reservations</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.19 - Create a book cover image for a fictional mystery novel. The cover should have a modern and appealing design, reflecting the mystery genre. It should .png" alt="Book 1">
+                    <p>Book Title 1</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.25 - Create a book cover image for a fictional romance novel. The design should be modern and attractive, capturing the essence of the romance genre. It sh.png" alt="Book 2">
+                    <p>Book Title 2</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.29 - Create a book cover image for a fictional science fiction novel. The design should be futuristic and captivating, embodying the science fiction genre.png" alt="Book 3">
+                    <p>Book Title 3</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.32 - Design a book cover image for a fictional history novel. The cover should have an elegant and classic design, reflecting the historical genre. It shou.png" alt="Book 4">
+                    <p>Book Title 4</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.35 - Create a book cover image for a fictional fantasy novel. The design should be enchanting and imaginative, perfectly capturing the fantasy genre. It sh.png" alt="Book 5">
+                    <p>Book Title 5</p>
+                </div>
+            </div>
+            <!-- List of reserved books -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- Footer content -->
+    </div>
+
+    <script>
+        function logout() {
+            // Redirect to the login/registration page
+            window.location.href = 'lms.html'; // Replace with your actual login page URL
+        }
+    </script>
+    
+</body>
+</html>

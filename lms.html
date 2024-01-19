@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./images/DALL·E 2024-01-11 12.13.04 - Design a simple and elegant logo for a library management system. The logo should be minimalistic, featuring a stylized book or a stack of books, with.png" alt="Library Logo">
+        </div>
+        
+        <div class="form-container">
+            <div class="toggle-buttons">
+                <button id="login-btn">Login</button>
+                <button id="register-btn">Register</button>
+            </div>
+            <form id="login-form" class="form">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <form id="register-form" class="form" style="display:none;">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('login-btn').addEventListener('click', function() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+        });
+
+        document.getElementById('register-btn').addEventListener('click', function() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="./dashboard.html">Home</a>
+        <a href="./bmp.html">Book-Management</a>
+        <a href="./profile.html">Profile</a>
+        <a href="javascript:void(0)" onclick="logout()">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <div class="welcome-section">
+            <h1>Welcome to [Library Name]</h1>
+            <p>Your portal to endless learning and discovery.</p>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search books, authors, genres...">
+        </div>
+
+        <div class="new-arrivals">
+            <h2>New Arrivals</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.19 - Create a book cover image for a fictional mystery novel. The cover should have a modern and appealing design, reflecting the mystery genre. It should .png" alt="Book 1">
+                    <p>Book Title 1</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.25 - Create a book cover image for a fictional romance novel. The design should be modern and attractive, capturing the essence of the romance genre. It sh.png" alt="Book 2">
+                    <p>Book Title 2</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.29 - Create a book cover image for a fictional science fiction novel. The design should be futuristic and captivating, embodying the science fiction genre.png" alt="Book 3">
+                    <p>Book Title 3</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.32 - Design a book cover image for a fictional history novel. The cover should have an elegant and classic design, reflecting the historical genre. It shou.png" alt="Book 4">
+                    <p>Book Title 4</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/DALL·E 2024-01-11 12.46.35 - Create a book cover image for a fictional fantasy novel. The design should be enchanting and imaginative, perfectly capturing the fantasy genre. It sh.png" alt="Book 5">
+                    <p>Book Title 5</p>
+                </div>
+                
+                <!-- Add more carousel items as needed -->
+            </div>
+        </div>
+        
+       
+    
+        <div class="text-carousel">
+            <div class="text-carousel-item">
+                <h3>Library Rules</h3>
+                <p>
+                    1. Maintain silence for a conducive reading environment.<br>
+                    2. No food or drinks to protect books and equipment.<br>
+                    3. Check out books properly at the desk before leaving.<br>
+                    4. Return or renew books on time.<br>
+                    5. Handle books and resources with care.<br>
+                    6. Use computers and other equipment responsibly.<br>
+                    7. Keep mobile phones on silent mode.<br>
+                    8. Do not remove any library property without proper checkout.<br>
+                    9. Respect library staff and other patrons.<br>
+                    10. Keep personal belongings secure, as the library is not responsible for lost items.<br>
+                    11. Children should be accompanied by adults.<br>
+                    12. Keep the library clean and tidy.<br>
+                    13. Photocopying library material is subject to copyright laws.<br>
+                    14. Follow all posted signs and guidelines.<br>
+                    15. No sleeping in the library.<br>
+                    16. Group study rooms must be reserved in advance.<br>
+                    17. Do not move furniture without permission.<br>
+                    18. No loud conversations or disturbances.<br>
+                    19. Report any damaged or missing books to staff.<br>
+                    20. Enjoy the resources and services respectfully.
+                </p>
+            </div>
+            <div class="text-carousel-item">
+                <h3>Book Arrangement</h3>
+                <p>
+                    Our library's book collection is organized <br>
+                    primarily by genre and then alphabetically <br>
+                    by the author's last name. Each genre has a <br>
+                    designated section
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+    
+        setInterval(() => {
+            // Calculate the next index
+            currentIndex = (currentIndex + 1) % totalItems;
+    
+            // Move the carousel
+            const offset = -currentIndex * 100; // 100px is the width of each item
+            items.forEach(item => {
+                item.style.transform = `translateX(${offset}px)`;
+            });
+        }, 5000); // Change every 5 seconds
+    </script>
+
+    <script>
+        let currentNoticeIndex = 0;
+        const noticeItems = document.querySelectorAll('.text-carousel-item');
+        const totalNoticeItems = noticeItems.length;
+
+        // Initially show the first item
+        noticeItems[currentNoticeIndex].classList.add('active');
+
+        setInterval(() => {
+            // Remove 'active' class from current item
+            noticeItems[currentNoticeIndex].classList.remove('active');
+
+            // Calculate the next index
+            currentNoticeIndex = (currentNoticeIndex + 1) % totalNoticeItems;
+
+            // Add 'active' class to the next item
+            noticeItems[currentNoticeIndex].classList.add('active');
+        }, 5000); // Change every 5 seconds
+    </script>
+
+    <script>
+        function logout() {
+            // Redirect to the login/registration page
+            window.location.href = 'lms.html'; // Replace with your actual login page URL
+        }
+    </script>
+
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin: 0 auto; /* Center the logo */
+}
+
+
+.form-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+}
+
+.toggle-buttons button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
